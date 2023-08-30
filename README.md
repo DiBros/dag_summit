@@ -42,4 +42,6 @@ Fill out the form fields per the guidance on the screen. Hover over the question
 13. Run through the **Validation** and work on any fixes that are suggested during the initial review.
 14. Once you are good with the tests, click the **Submission** tab and **Submit for review** button.
 
+
+
 Congratulation! You are done with your submission! Please consider that the certification process can take several days to complete. Please be patient. It takes time because we want to get it right!
