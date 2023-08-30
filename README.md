@@ -34,7 +34,7 @@ Fill out the form fields per the guidance on the screen. Hover over the question
     *  You can use the **Alexa skill icon builder [tool](https://developer.amazon.com/docs/tools/icon-builder.html).**
 
 7. When you are ready, click **Save and Continue** at the bottom of the screen to move onto **Privacy & Compliance**.
-8. For this skill, the answer is no for all the questions. For future skills, make sure you answer this appropriately.
+8. For this skill, the answer is **No** for all the questions. For future skills, make sure you answer this appropriately.
 9. **Export Compliance.** Be certain that you agree with all of the conditions. If you do, make sure to check this box, as Amazon requires this permission to distribute your skill around the globe.  
 10. Click **Save and Continue** at the bottom of the screen to move onto **Availability**
 11. **Where would you like this skill to be available?** Can Amazon distribute your skill in all regions or you use some region specific features in your skill. For this skill, the answer is **In all countries and regions where Amazon distributes skills**.
