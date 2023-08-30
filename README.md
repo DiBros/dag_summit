@@ -1,4 +1,4 @@
-### This is a simple skill that extracts a number and shows it on the screen using an APL animation
+### This is a simple skill that generate a random colour and shows it on the screen using APL
 ![alt text](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png)
 
 # How to deploy:
