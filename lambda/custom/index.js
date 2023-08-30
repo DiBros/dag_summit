@@ -1,22 +1,34 @@
 const Alexa = require('ask-sdk-core');
 
-// setting extraction range
-let min = 1
-let max = 189
+// setting the array range
+let min = 0
+let max = 10
+
+// setting the array with colours
+let colours = [
+        "red",
+        "blue",
+        "green",
+        "brown",
+        "white",
+        "azure",
+        "orange",
+        "yellow",
+        "grey",
+        "purple",
+        "lightblue"
+        ]
 
 // Welcome message string
-let welcomeMessage = "Ciao, benvenuti all estrazione. "
-
-// URL for the background image
-let imageURL = 'https://alexa-presentation-language.s3-eu-west-1.amazonaws.com/assets/solid-white.jpg'
+let welcomeMessage = "Hello and welcome to the lucky colour of the day. "
 
 // Random phrases for the ExtractAgainIntent
 let phrases = [
-        "Va bene, il prossimo numero estratto é ",
-        "OK, Ne estraggo un altro. Il numero fortunato é ",
-        "Nessun problema, ora ho estratto il numero ",
-        "Eccone un altro, numero ",
-        "Certo, il prossimo numero é "
+        "That's ok! The next lucky colour is ",
+        "OK, I will draw another one. The lucky colour is ",
+        "No problem, I have now extracted the colour  ",
+        "Here's another one, colour ",
+        "Sure, the next colour is "
         ]
         
 // Generic function to check interface availability on calling device
@@ -42,10 +54,10 @@ function getRandomInt(min, max) {
   
 }
 
-function getRandomExtractionPhrase(extractedNumber) {
+function getRandomExtractionPhrase(extractedNumber, colours) {
     
     let randomPhraseIndex = getRandomInt(0,phrases.length)
-    return phrases[randomPhraseIndex] + extractedNumber
+    return phrases[randomPhraseIndex] + colours[extractedNumber]
 }
 
 const LaunchRequestHandler = {
@@ -58,7 +70,7 @@ const LaunchRequestHandler = {
         if (supportsAPL(handlerInput))
         {
             let randomNumber = getRandomInt(min,max)
-            speakOutput = welcomeMessage + 'Il numero fortunato é ' + randomNumber;
+            speakOutput = welcomeMessage + 'The lucky colour is ' + colours[randomNumber];
             return handlerInput.responseBuilder
                 .speak(speakOutput)
                 .addDirective({
@@ -67,8 +79,7 @@ const LaunchRequestHandler = {
             document: require ('./extraction.json'),
             datasources: {
                     "data": {
-                        "number":randomNumber,
-                        "imageURL": imageURL
+                        "colour": colours[randomNumber]
                     }
                 },
             })
@@ -78,7 +89,8 @@ const LaunchRequestHandler = {
     else
 
     {
-        speakOutput = "Mi dispiace, al momento questa skill supporta solo dispositivi con display"
+        let randomNumber = getRandomInt(min,max)
+        speakOutput = welcomeMessage + 'The lucky colour is ' + colours[randomNumber];
         return handlerInput.responseBuilder
         .speak(speakOutput)
         .getResponse();
@@ -97,7 +109,7 @@ const ExtractAgainIntentHandler = {
         if (supportsAPL(handlerInput))
         {
             let randomNumber = getRandomInt(min,max)
-            const speakOutput = getRandomExtractionPhrase(randomNumber);
+            const speakOutput = getRandomExtractionPhrase(randomNumber, colours);
             return handlerInput.responseBuilder
                 .speak(speakOutput)
                 .addDirective({
@@ -106,8 +118,7 @@ const ExtractAgainIntentHandler = {
             document: require ('./extraction.json'),
             datasources: {
                     "data": {
-                        "number":randomNumber,
-                        "imageURL": imageURL
+                        "colour": colours[randomNumber]
                     }
                 },
             })
@@ -116,7 +127,7 @@ const ExtractAgainIntentHandler = {
 
     else
     {
-        speakOutput = "Mi dispiace, al momento questa skill supporta solo dispositivi con display"
+        const speakOutput = "Sorry, this skill currently only supports devices with screen"
         return handlerInput.responseBuilder
         .speak(speakOutput)
         .getResponse();
@@ -131,7 +142,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = `Ciao, la skill estrarrá un numero da ${min} a ${max}. Se vuoi estrarre un altro numero, dí: riprova.`;
+        const speakOutput = `Hello, the skill will extract a lucky colour. If you want to extract another colour, say: try again.`;
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -146,7 +157,7 @@ const CancelAndStopIntentHandler = {
                 || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        const speakOutput = 'Arrivederci!';
+        const speakOutput = 'Goodbye!';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
@@ -172,7 +183,7 @@ const IntentReflectorHandler = {
     },
     handle(handlerInput) {
         const intentName = Alexa.getIntentName(handlerInput.requestEnvelope);
-        const speakOutput = `Hai appena invocato ${intentName}`;
+        const speakOutput = `You have just invoked ${intentName}`;
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -190,7 +201,7 @@ const ErrorHandler = {
     },
     handle(handlerInput, error) {
         console.log(`~~~~ Error handled: ${error.stack}`);
-        const speakOutput = `Scusa, si é verificato un errore. Riprova.`;
+        const speakOutput = `Sorry, an error occurred. Please try again.`;
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
