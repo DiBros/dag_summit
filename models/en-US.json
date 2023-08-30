@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "estrazione napoli",
+            "invocationName": "lucky colour",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -19,9 +19,8 @@
                     "name": "ExtractAgainIntent",
                     "slots": [],
                     "samples": [
-                        "estrai ancora",
-                        "altro numero",
-                        "riprova"
+                        "try again",
+                        "new colour"
                     ]
                 },
                 {
