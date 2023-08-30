@@ -19,7 +19,7 @@
 
 ## Get Your Skill Certified and Published
 
-We are almost done!  The last step is to add the metadata that your skill will use in the [Skill Store](http://amazon.com/skills).  This page will walk you through the remaining steps to launch your skill!
+We are almost done!  The last step is to add the metadata that your skill will use in the [Skill Store](http://amazon.com/skills).  This section will walk you through the remaining steps to launch your skill!
 
 Fill out the form fields per the guidance on the screen. Hover over the question mark icons for details regarding each respective field. **Fields marked with an Asterisk, are required!**
 	* Take the time to get these right so that your skill will pass certification!
