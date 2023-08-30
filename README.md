@@ -1,12 +1,18 @@
 ### This is a simple skill that generate a random colour and shows it on the screen using APL
 ![alt text](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png)
 
-# How to deploy:
+# How to import a skill from GitHub:
 
-1) Install and configure the **ASK-CLI**:
-https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html
-2) Clone this repo
-3) ```cd``` into the just cloned folder
-4) Run the ```ask deploy``` command
-5) Wait for the deployment
-6) Launch the skill using the [invocation name](https://github.com/ugaetano/skill-sample-nodejs-apl-raffle/blob/master/models/it-IT.json#L4)
+1. Go to the Developer Console: https://developer.amazon.com/alexa/console/ask
+2. Click on “Create Skill”
+3. Enter the Skill name
+4. Click on the “Next” button
+5. Choose “Other” for type of experience section
+6. Choose “Custom” for the model section
+7. Select “Alexa-hosted (Node.js)” for the hosting services section
+8. Click on the “Next” button
+9. Take the link from the GitHub repo
+    1. Go to https://github.com/DiBros/dag_summit/tree/main
+    2. Click the green “< > Code” button
+    3. Under the “HTTPS” tab click the copy button next to the text box
+10. Click on the “Import skill” button, paste the link from GitHub and click “Import”
