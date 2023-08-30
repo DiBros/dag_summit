@@ -21,8 +21,7 @@
 
 We are almost done!  The last step is to add the metadata that your skill will use in the [Skill Store](http://amazon.com/skills).  This section will walk you through the remaining steps to launch your skill!
 
-Fill out the form fields per the guidance on the screen. Hover over the question mark icons for details regarding each respective field. **Fields marked with an Asterisk, are required!**
-	* Take the time to get these right so that your skill will pass certification!
+Fill out the form fields per the guidance on the screen. Hover over the question mark icons for details regarding each respective field. **Fields marked with an Asterisk, are required!** Take the time to get these right so that your skill will pass certification!
 
 1. Select the **Distribution** tab from the top navigation menu.
 2. **One Sentence Description**: This skill will pop up a colour on the screen.
