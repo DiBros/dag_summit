@@ -24,15 +24,13 @@ We are almost done!  The last step is to add the metadata that your skill will u
 Fill out the form fields per the guidance on the screen. Hover over the question mark icons for details regarding each respective field. **Fields marked with an Asterisk, are required!** Take the time to get these right so that your skill will pass certification!
 
 1. Select the **Distribution** tab from the top navigation menu.
-2. **One Sentence Description**: This skill will pop up a colour on the screen.
-3. **Detailed Description**
-	*  **Spend some time coming up with an enticing, succinct description.**  This is one of the few places you have an opportunity to attract new users, so make the most of it!  These descriptions show up in the list of skills available in the [Alexa app](http://alexa.amazon.com/spa/index.html#skills) and the [skills store](http://www.amazon.com/skills).
-4. **Example Phrases**, come up with the three most exciting ways a user can talk to your skill. For example: 
-	*Alexa, launch lucky colour
+2. **One Sentence Description**. For example: *This skill will pop up a colour on the screen.*
+3. **Detailed Description**. Spend some time coming up with an enticing, succinct description. This is one of the few places you have an opportunity to attract new users, so make the most of it! These descriptions show up in the list of skills available in the [Alexa app](http://alexa.amazon.com/spa/index.html#skills) and the [skills store](http://www.amazon.com/skills).
+4. **Example Phrases**. Come up with up to three most exciting ways a user can talk to your skill. For example:  *Alexa, launch lucky colour*
 5. Choose the most appropriate **Category** for your skill.
 6. **Create your skill's icons**. You need two sizes of your icon: 108x108px and 512x512px.
 
-    *  Make sure you have the rights to the icons you create. Please don't violate any trademarks or copyrights.
+    *  Make sure you have the rights to the icons you create. Please do not violate any trademarks or copyrights.
     *  You can use the **Alexa skill icon builder [tool](https://developer.amazon.com/docs/tools/icon-builder.html).**
 
 7. When you are ready, click **Save and Continue** at the bottom of the screen to move onto **Privacy & Compliance**.
