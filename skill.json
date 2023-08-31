@@ -2,7 +2,7 @@
     "apis": {
         "custom": {
             "endpoint": {
-                "uri": "skill-sample-nodejs-apl-raffle",
+                "uri": "dag_summit",
                 "sourceDir": "lambda/custom"
             },
             "interfaces": [
