@@ -62,11 +62,7 @@
           "name": "Lucky colour",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa apri estrazione napoli",
-            "ciao",
-            "aiuto"
-          ],
+          "examplePhrases": [],
           "keywords": []
         }
       },
