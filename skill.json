@@ -58,8 +58,8 @@
     "manifestVersion": "1.0",
     "publishingInformation": {
       "locales": {
-        "it-IT": {
-          "name": "skill-sample-nodejs-apl-raffle",
+        "en-US": {
+          "name": "Lucky colour",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
