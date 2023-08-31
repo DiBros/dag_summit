@@ -1,9 +1,5 @@
 const Alexa = require('ask-sdk-core');
 
-// setting the array range
-let min = 0
-let max = 10
-
 // setting the array with colours
 let colours = [
         "red",
@@ -16,8 +12,30 @@ let colours = [
         "yellow",
         "grey",
         "purple",
-        "lightblue"
+        "lightblue",
+        "fuchsia",
+        "maroon",
+        "pink",
+        "beige",
+        "violet",
+        "lightgreen",
+        "silver",
+        "gold",
+        "lime",
+        "wheat",
+        "salmon",
+        "chocolate",
+        "turquoise",
+        "aqua",
+        "crimson",
+        "navy",
+        "orchid",
+        "teal"
         ]
+
+// setting the array range
+let min = 0
+let max = colours.length
 
 // Welcome message string
 let welcomeMessage = "Hello and welcome to the lucky colour of the day. "
