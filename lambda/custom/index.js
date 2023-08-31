@@ -38,7 +38,7 @@ let min = 0
 let max = colours.length
 
 // Welcome message string
-let welcomeMessage = "Hello and welcome to the lucky colour of the day. "
+let welcomeMessage = "Hello and welcome to lucky colour. "  //change the welcome message according to the name of the skill
 
 // Random phrases for the ExtractAgainIntent
 let phrases = [
@@ -46,7 +46,7 @@ let phrases = [
         "OK, I will draw another one. The lucky colour is ",
         "No problem, I have now extracted the colour  ",
         "Here's another one, colour ",
-        "Sure, the next colour is "
+        "Sure, the next lucky colour is "
         ]
         
 // Generic function to check interface availability on calling device
@@ -88,7 +88,7 @@ const LaunchRequestHandler = {
         if (supportsAPL(handlerInput))
         {
             let randomNumber = getRandomInt(min,max)
-            speakOutput = welcomeMessage + 'The lucky colour is ' + colours[randomNumber];
+            speakOutput = welcomeMessage + 'Your lucky colour for today is ' + colours[randomNumber];
             return handlerInput.responseBuilder
                 .speak(speakOutput)
                 .addDirective({
